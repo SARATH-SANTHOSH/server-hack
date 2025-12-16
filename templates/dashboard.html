@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Live System Status</h2>
+
+<div class="cards">
+    <div class="card">CPU Usage<br><span id="cpu">--</span>%</div>
+    <div class="card">RAM Usage<br><span id="ram">--</span>%</div>
+    <div class="card">Disk Usage<br><span id="disk">--</span>%</div>
+    <div class="card">Processes<br><span id="proc">--</span></div>
+</div>
+
+<h2>Threat Status</h2>
+<div id="threat" class="safe">✔ SYSTEM OPERATING NORMALLY</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cyber Defense Console</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/live.js') }}" defer></script>
+</head>
+<body>
+
+<header class="top">
+    <h1>⚡ CYBER DEFENSE CONSOLE</h1>
+    <p>ML-Based Intrusion Detection System</p>
+    <a class="logout-btn" href="/logout">LOGOUT</a>
+</header>
+
+
+<nav class="sidebar">
+    <a href="/">Dashboard</a>
+    <a href="/alerts">Threat Alerts</a>
+    <a href="/logs">System Logs</a>
+</nav>
+
+<main class="content">
+    {% block content %}{% endblock %}
+</main>
+
+</body>
+</html>

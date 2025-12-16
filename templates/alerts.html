@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Detected Security Threats</h2>
+
+<table>
+<tr>
+    <th>Time</th>
+    <th>Attack Type</th>
+    <th>Severity</th>
+    <th>Explanation</th>
+</tr>
+
+{% for a in alerts %}
+<tr class="alert">
+    <td>{{ a[0] }}</td>
+    <td>{{ a[1] }}</td>
+    <td>{{ a[2] }}</td>
+    <td>{{ a[3] }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}
